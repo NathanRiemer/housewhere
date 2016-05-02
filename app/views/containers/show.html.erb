@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Container type:</strong>
+  <%= @container.container_type %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @container.location %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @container.description %>
+</p>
+
+<p>
+  <strong>Room:</strong>
+  <%= @container.room %>
+</p>
+
+<%= link_to 'Edit', edit_container_path(@container) %> |
+<%= link_to 'Back', containers_path %>

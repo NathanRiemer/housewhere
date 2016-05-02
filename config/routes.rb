@@ -1,9 +1,21 @@
 Rails.application.routes.draw do
-  resources :things
-  resources :containers
-  resources :rooms
-  resources :floors
-  resources :homes
+  # resources :things
+  # resources :containers
+  # resources :rooms
+  # resources :floors
+  # resources :homes
+
+  shallow do
+    resources :homes do
+      resources :floors do
+        resources :rooms do
+          resources :containers do
+            resources :things
+          end
+        end
+      end
+    end
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
